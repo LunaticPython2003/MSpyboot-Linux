@@ -9,4 +9,3 @@ sudo cp ./HashTool.efi /boot/efi/EFI/HashTool.efi
 sudo cd /boot/efi/EFI/systemd
 mv ./systemd-bootx64.efi ./loader.efi
 cp ./preloader.efi ./systemd-bootx64.efi
-#efibootmgr --verbose --disk /dev/sdX --part Y --create --label "PreLoader" --loader /boot/efi/EFI/systemd/PreLoader.efi

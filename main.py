@@ -8,7 +8,6 @@ sg.ChangeLookAndFeel('DarkGrey13')
 def run_deb(flag):
     window.close()
     if flag is True:
-        os.system("sudo apt install efibootmgr")
         os.system("get_files.sh")
         sg.Popup("System will reboot in 3 seconds. Enroll the kernel from hashtool upon reboot")
         time.sleep(3)
