@@ -7,7 +7,7 @@
  ## Current Status
  The script currently has the following capabilities :-
  - Achieves secure boot without GRUB (with Preloader)
- - Works on any distro based on Ubuntu (or Debian)
+ - Should work on all Linux distros (Tested on Ubuntu and Arch)
  - Has a GUI menu for conviniece (not fully complete)
  
  ## Running the script
@@ -18,7 +18,7 @@
  `python ./main.py`
  
  ## TODO
- - [ ] Support for distros beyond Ubuntu
+ - [x] Support for distros beyond Ubuntu
  - [ ] Support for GRUB
  - [ ] Better GUI interface 
  - [ ] Implementation of other solutions if the default fails
