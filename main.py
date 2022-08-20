@@ -18,7 +18,7 @@ def grub():
     exit()
 
 layout = [[sg.Text('Select your distro: '), sg.Combo(['Ubuntu/Debian', 'Arch', 'Fedora'])],
-           [sg.Text('Select a method: '), sg.Radio('With GRUB', 1, default=True), sg.Radio('Without GRUB', 2)],
+           [sg.Text('Select a method: '), sg.Radio('With GRUB', 1), sg.Radio('Without GRUB', 1)],
            [sg.Checkbox('I agree to proceed ahead with the installation script')],
            [sg.Button('OK'), sg.Button('Cancel')]]
 
