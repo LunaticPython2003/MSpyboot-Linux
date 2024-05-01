@@ -7,13 +7,13 @@ sg.ChangeLookAndFeel('DarkGrey13')
 
 def preloader():
     window.close()
-   
+
     os.system("get_files.sh")
     sg.Popup("System will reboot in 3 seconds. Enroll the kernel from hashtool upon reboot")
     time.sleep(3)
     os.system("init 6")
 
-def grub():
+def run_grub():
     sg.Popup("Grub installation not implemented yet!")
     exit()
 
@@ -31,6 +31,6 @@ while True:
         preloader()
     else:
         run_grub()
-    
+
     if event in (None, 'Cancel'):
          exit()
