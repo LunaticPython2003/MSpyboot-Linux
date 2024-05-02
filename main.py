@@ -1,20 +1,27 @@
 import os
-import distro
+import sys
 import PySimpleGUI as sg
 import time
 
 sg.ChangeLookAndFeel('DarkGrey13')
 
+def root_check(user = os.geteuid):
+    if user != 0:
+        sg.Popup("The script will only work as root!")
+        sys.exit(0)
+
 def preloader():
     window.close()
-
+    root_check()
     os.system("get_files.sh")
     sg.Popup("System will reboot in 3 seconds. Enroll the kernel from hashtool upon reboot")
     time.sleep(3)
-    os.system("init 6")
+    os.system("reboot")
 
 def run_grub():
-    sg.Popup("Grub installation not implemented yet!")
+    window.close()
+    root_check()
+    os.system('grub_install.sh')
     exit()
 
 layout = [[sg.Text('Select your distro: '), sg.Combo(['Ubuntu/Debian', 'Arch', 'Fedora'])],
